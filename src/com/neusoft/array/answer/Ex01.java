@@ -16,8 +16,8 @@ public class Ex01 {
 			temp=a[i];
 			//每个元素只与自己之后的数比较即可
 			for(int j=i+1;j<a.length;j++) {
-				if(temp==a[j]) {
-					flag=true;
+				if(temp == a[j]) {
+					flag = true;
 					break;
 					}
 			}
