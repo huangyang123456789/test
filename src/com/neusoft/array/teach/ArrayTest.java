@@ -33,6 +33,7 @@ public class ArrayTest {
         System.out.println(Arrays.toString(intAtrr3));
         //声明创建赋值
         int[] intArr3 = new int[]{1,2,3};
+//      21323
 
 //        int[] intArr2;
 //        intArr2 = {123,12,1};//这种方式编译不通过
