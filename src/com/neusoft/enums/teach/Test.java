@@ -13,5 +13,8 @@ public class Test {
         System.out.println(AppResponseStatus.valueOf("SERVER_EXCEPTION"));
         System.out.println(AppResponseStatus.SERVER_EXCEPTION.compareTo(AppResponseStatus.NOT_FOUND));
         System.out.println(AppResponseStatus.SUCCESS.ordinal());
+
+//        gitgitGGGGGGGGIIIIIITTTTTT
+
     }
 }
