@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) {
-		int[] arr = { 100, 200, 35, 80, 99, 200, 3, 20 };
+		int[] arr = { 100, 200, 35, 80, 99, 200, 3, 17 };
 		int m=0;
 		System.out.print("当前数组为：");
 		for (int i = 0; i < arr.length; i++) {
