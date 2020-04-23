@@ -10,6 +10,7 @@ public class Ex03 {
 		System.out.println("请输入选手的10个得分：");
 		Scanner sc = new Scanner(System.in);
 		for(int i=0;i<score.length;i++) {
+			int i1 = 111;
 			score[i]=sc.nextDouble();
 		}
 		Arrays.sort(score);
