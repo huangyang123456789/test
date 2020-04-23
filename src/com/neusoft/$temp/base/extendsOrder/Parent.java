@@ -10,6 +10,7 @@ public  class Parent {
 	{
 		System.out.println("父类的实例代码块name:"+name);
 		name ="xiaoming";
+		int i;
 	}
 	public Parent() {
 		System.out.println("父类构造器age:"+age);
