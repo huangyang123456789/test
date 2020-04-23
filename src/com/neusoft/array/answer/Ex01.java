@@ -9,13 +9,15 @@ public class Ex01 {
 		for(int i=0;i<a.length;i++) {
 			//找出1个重复的,标志位一改变就可以跳出
 			if(flag==true) {
+				int i1 = 1;
+
 				break;
 			}
 			temp=a[i];
 			//每个元素只与自己之后的数比较即可
 			for(int j=i+1;j<a.length;j++) {
-				if(temp==a[j]) {
-					flag=true;
+				if(temp == a[j]) {
+					flag = true;
 					break;
 					}
 			}
@@ -28,3 +30,4 @@ public class Ex01 {
 	}
 
 }
+//修改来自wjc
