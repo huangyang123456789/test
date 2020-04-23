@@ -3,7 +3,7 @@ package com.neusoft.base.answer;
 public class Ex11 {
 
 	public static void main(String[] args) {
-/*	·½·¨1
+/*	ï¿½ï¿½ï¿½ï¿½1
  		for (int i = 1000; i <= 9999; i++) {
 			int ge = i % 10;
 			int shi = (i % 100) / 10;//int shi=(i/10)%10;
@@ -22,6 +22,9 @@ public class Ex11 {
 				System.out.println(s);
 			}
 		}
+
+		//341422
+
 	}
 
 }
