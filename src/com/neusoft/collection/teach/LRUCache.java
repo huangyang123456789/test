@@ -14,7 +14,7 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> {
      * 传递进来最多能缓存多少数据 *
      * @param cacheSize 缓存大小 */
     public LRUCache(int cacheSize) {
-        // true 表示让 linkedHashMap 按照访问顺序来进行排序，最近访问的放在头部，最老访问的 放在尾部。
+        // false按照插入顺序进行排序，true按照访问顺序，把访问的元素插入到链表后
         super((int) Math.ceil(cacheSize / 0.75) + 1, 0.75f, true);
         CACHE_SIZE = cacheSize;
     }
@@ -30,6 +30,7 @@ public class LRUCache<K,V> extends LinkedHashMap<K,V> {
         lruCache.put("2", "b");
         lruCache.put("3", "c");
         lruCache.put("4", "c");
+        lruCache.get("3");
         System.out.println(lruCache);
     }
 }
