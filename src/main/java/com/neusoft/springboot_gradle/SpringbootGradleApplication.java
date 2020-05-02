@@ -1,13 +1,13 @@
-package com.neusoft.springboot_test;
+package com.neusoft.springboot_gradle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootTestApplication {
+public class SpringbootGradleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootTestApplication.class, args);
+        SpringApplication.run(SpringbootGradleApplication.class, args);
     }
 
 }
