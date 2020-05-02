@@ -6,3 +6,5 @@ gradlew.bat
 /.gradle/
 /.idea/
 out/
+build/
+gradle/
