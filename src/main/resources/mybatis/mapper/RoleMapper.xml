@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.zwu.usermodel.mapper.RoleMapper">
+    <select id="getAllRoleName" parameterType="integer" resultType="Role">
+        select t2.*
+        from t_user_role t1
+        left join t_role t2
+        on t1.user_id=#{id} and t1.role_id=t2.id
+    </select>
+
+    <insert id="insUserToRole" parameterType="RoleUser">
+            insert into
+                t_user_role
+            values
+        <foreach collection="roleId" item="roleId" separator=",">
+            (
+            default,
+            #{roleId},
+            #{userId},
+            #{sortNo},
+            #{gmtCreate},
+            #{createBy},
+            #{gmtModified},
+            #{lastModifiedBy},
+            #{version},
+            #{isDeleted}
+            )
+        </foreach>
+    </insert>
+
+    <update id="delUserRole" parameterType="integer">
+        update
+            t_user_role
+        set
+            is_deleted=1
+        where user_id=#{uid}
+    </update>
+</mapper>
