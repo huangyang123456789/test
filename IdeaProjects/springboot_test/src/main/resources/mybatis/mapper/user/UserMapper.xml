@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.springboot_test.dao.UserDao">
+    <!--新增用户-->
+    <insert id="addUser" parameterType="com.neusoft.springboot_test.entity.UserInfo">
+        insert into t_user (user_name,user_pwd,user_sex,create_time) values (#{userName},#{userPwd},#{userSex},now());
+    </insert>
+    <!--删除用户-->
+    <update id="deleteUser" parameterType="com.neusoft.springboot_test.entity.UserInfo">
+        update t_user set is_delete = 1 where user_id = #{userId};
+    </update>
+    <!--查询用户-->
+    <select id="selectUser" parameterType="com.neusoft.springboot_test.entity.UserInfo" resultType="com.neusoft.springboot_test.entity.UserInfo">
+        select user_id,user_name,user_pwd,user_sex,create_time from t_user where user_id = #{userId} and is_delete = 0;
+    </select>
+    <!--修改用户密码-->
+    <update id="changeUser" parameterType="com.neusoft.springboot_test.entity.UserInfo">
+        update t_user set password = #{userPwd} where user_id = #{userId};
+    </update>
+</mapper>
