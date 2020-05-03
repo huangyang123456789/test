@@ -48,7 +48,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -136,32 +136,6 @@
       <workItem from="1588480539557" duration="762000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 05m 42s.xml">
-      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 07m 46s.xml">
-      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 08m 42s.xml">
-      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 12m 56s.xml">
-      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 13m 49s.xml">
-      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 15m 31s.xml">
-      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 18m 19s.xml">
-      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 13h 45m 27s.xml">
-      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
