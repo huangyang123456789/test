@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.springboot_test.dao.RoleDao">
+    <!--新增用户角色-->
+    <insert id="addRole" parameterType="com.neusoft.springboot_test.entity.RoleInfo">
+        insert into t_role (user_id,role_id) values (#{userId},#{roleId});
+    </insert>
+    <!--删除用户角色-->
+    <update id="deleteRole" parameterType="com.neusoft.springboot_test.entity.RoleInfo">
+        update t_role set is_delete = 1 where id = #{id};
+    </update>
+    <!--查询用户角色-->
+    <select id="selectRole" parameterType="com.neusoft.springboot_test.entity.RoleInfo" resultType="com.neusoft.springboot_test.entity.RoleInfo">
+        SELECT t1.id,t1.user_id,t3.user_name,t1.role_id,t2.role_name From t_role t1 INNER JOIN t_rolelist t2 on t1.role_id = t2.role_id INNER JOIN t_user t3 on t1.user_id = t3.user_id WHERE t1.user_id = #{userId} AND t1.is_delete = 0;
+    </select>
+    <!--修改用户角色-->
+    <update id="changeRole" parameterType="com.neusoft.springboot_test.entity.RoleInfo">
+        update t_role set role_id = #{roleId} where id = #{id};
+    </update>
+</mapper>

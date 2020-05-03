@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="781ba1ef-75e0-4712-99d8-9a8931678e1f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\Program Files\maven\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bLsSDusJtrRvJFs9J0JNJ0XJt8" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588228331953" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../female" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neusoft.springboot_test.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\IdeaProjects\springboot_test\src\main\resources\mybatis\mapper\user" />
+      <recent name="D:\document\IDEA\springboot_test\src\main\resources\mybatis" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringbootTestApplication">
+    <configuration name="SpringbootTestApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neusoft.springboot_test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.neusoft.springboot_test" />
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.springboot_test.SpringbootTestApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootTestApplicationTests.datasourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neusoft.springboot_test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.neusoft.springboot_test" />
+      <option name="MAIN_CLASS_NAME" value="com.neusoft.springboot_test.SpringbootTestApplicationTests" />
+      <option name="METHOD_NAME" value="datasourceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neusoft.springboot_test.SpringbootTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringbootTestApplicationTests" />
+        <item itemvalue="JUnit.SpringbootTestApplicationTests.datasourceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="781ba1ef-75e0-4712-99d8-9a8931678e1f" name="Default Changelist" comment="" />
+      <created>1588209527424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588209527424</updated>
+      <workItem from="1588209529124" duration="16863000" />
+      <workItem from="1588422708774" duration="4476000" />
+      <workItem from="1588427211950" duration="4228000" />
+      <workItem from="1588480539557" duration="762000" />
+      <workItem from="1588481408546" duration="233000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 05m 42s.xml">
+      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 07m 46s.xml">
+      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 08m 42s.xml">
+      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 12m 56s.xml">
+      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 13m 49s.xml">
+      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests_datasourceTest - 2020.04.30 at 11h 15m 31s.xml">
+      <configuration name="SpringbootTestApplicationTests.datasourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 11h 18m 19s.xml">
+      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringbootTestApplicationTests - 2020.04.30 at 13h 45m 27s.xml">
+      <configuration name="SpringbootTestApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
