@@ -63,10 +63,10 @@ public class UserController {
         userInfo.setUserPwd("asd");
         int t = userService.changeUser(userInfo);
         if(0 == t){
-            return "删除用户"+ReturnType.failure.getType();
+            return "更改用户密码"+ReturnType.failure.getType();
         }
         else {
-            return "删除用户"+ReturnType.Success.getType();
+            return "更改用户密码"+ReturnType.Success.getType();
         }
     }
 }
