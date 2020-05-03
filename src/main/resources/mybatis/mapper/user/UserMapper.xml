@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.work.demoofgradle.dao.UserDao">
+    <insert id="saveUser" parameterType="com.work.demoofgradle.entity.UserInfo">
+        insert into t_employee
+        (rid,role,rname,rsex,is_deleted)
+        values
+        (#{rid},#{role},#{rname},#{rsex},#{isDeleted})
+    </insert>
+    <select id="findUserById" resultType="com.work.demoofgradle.entity.UserInfo" parameterType="com.work.demoofgradle.entity.UserInfo">
+        select * from t_employee where rid=#{rid}
+    </select>
+    <update id="updateUserById" parameterType="com.work.demoofgradle.entity.UserInfo">
+        update t_employee t set t.is_deleted = 1 where t.rid = #{rid};
+    </update>
+    <resultMap type="com.work.demoofgradle.entity.RoleInfo" id="queryForListMap">
+        <id property="role" column="role"/>
+        <result property="roletype" column="roletype" />
+    </resultMap>
+<!--    <select id="findRole" resultType="com.work.demoofgradle.entity.RoleInfo" >-->
+<!--        select b.roletype from t_employee a,t_role b where a.role=b.role;-->
+<!--    </select>-->
+</mapper>

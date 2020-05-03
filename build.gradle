@@ -1,0 +1,76 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+    id 'war'
+    id 'idea'
+}
+
+group = 'com.work'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compile group: 'com.alibaba', name: 'druid', version: '1.1.10'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.2'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.2.RELEASE'
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    testCompile (
+            'org.springframework.boot:spring-boot-starter-test'
+    )
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+
+    String someString = ''
+
+    configurations.runtime.each {someString = someString + " lib\\"+it.name} //遍历项目的所有依赖的jar包赋值给变量someString
+
+    manifest {
+
+        attributes 'Main-Class': 'com.work.demoofgradle'
+
+        attributes 'Class-Path': someString
+
+    }
+
+}
+task copyJar(type:Copy){
+
+    from configurations.runtime
+
+    into ('build/libs/lib')
+
+
+}
+
+
+task release(type: Copy,dependsOn: [build,copyJar]) {
+
+// from 'conf'
+
+// into ('build/libs/eachend/conf')
+
+}
