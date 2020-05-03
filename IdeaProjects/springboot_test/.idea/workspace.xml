@@ -51,15 +51,16 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\IdeaProjects\springboot_test" />
+      <recent name="C:\Users\dell\IdeaProjects\springboot_test\src\main\resources\mybatis\mapper\user" />
+      <recent name="D:\document\IDEA\springboot_test\src\main\resources\mybatis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.neusoft.springboot_test.dao" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\IdeaProjects\springboot_test\src\main\resources\mybatis\mapper\user" />
-      <recent name="D:\document\IDEA\springboot_test\src\main\resources\mybatis" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\IdeaProjects\springboot_test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,6 +137,7 @@
       <workItem from="1588480539557" duration="762000" />
       <workItem from="1588495859571" duration="248000" />
       <workItem from="1588498794390" duration="291000" />
+      <workItem from="1588501344242" duration="247000" />
     </task>
     <servers />
   </component>
