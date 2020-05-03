@@ -20,11 +20,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/getAllUser")
-    public String getAllUser(Model model){
-        List<UserInfo> userInfo = userService.findAll();
-        model.addAttribute("userList",userInfo);
-        return "allUser";
+    @RequestMapping("/findAll")
+    public List<UserInfo> listUserInfo(UserInfo userInfo){
+        List<UserInfo> userInfos = userService.listUserInfo(userInfo);
+        return userInfos;
     }
 
     @RequestMapping("/insertUser")
@@ -36,16 +35,16 @@ public class UserController {
         return userService.insertUser(userInfo);
     }
 
-    @RequestMapping("/removeUser")
-    public String removeUser(Model model,String id) {
-        model.addAttribute("user",userService.removeUser(id));
-        userService.removeUser(id);
+    @RequestMapping("/deleteUser")
+    public String deleteUser(Model model,String id) {
+        model.addAttribute("user",userService.deleteUser(id));
+        userService.deleteUser(id);
         return "removeUser";
     }
 
-    @RequestMapping("/reviseUser")
-    public String toUpdatePaper(Model model, String id) {
-        model.addAttribute("userInfo", userService.findUserById(id));
-        return "updateUser";
+    @RequestMapping("/updateUser")
+    public String updateUser(UserInfo userInfo) {
+        userService.updateUser(userInfo);
+        return "reviseUser";
     }
 }

@@ -14,10 +14,9 @@ public interface UserService {
 
     int insertUser(UserInfo userInfo);
 
-    int removeUser(String id);
+    int deleteUser(String id);
 
-    int reviseUser(UserInfo userInfo);
+    int updateUser(UserInfo userInfo);
 
-    List<UserInfo> findAll();
-    UserInfo findUserById(String id);
+    List<UserInfo> listUserInfo(UserInfo userInfo);
 }

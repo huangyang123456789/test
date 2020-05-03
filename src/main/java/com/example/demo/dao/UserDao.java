@@ -13,13 +13,39 @@ import java.util.List;
 @Repository
 @Mapper
 public interface UserDao {
+    /**
+     * 增加用户
+     * @author tyh
+     * @params userInfo
+     * @return int
+     * @date
+     */
     int saveUser(UserInfo userInfo);
 
+    /**
+     * 删除用户
+     * @author tyh
+     * @params id
+     * @return String
+     * @date
+     */
     int deleteUser(String id);
 
+    /**
+     * 修改用户
+     * @author tyh
+     * @params userInfo
+     * @return int
+     * @date
+     */
     int updateUser(UserInfo userInfo);
 
-    List<UserInfo> findAll();
-
-    UserInfo findUserById(String id);
+    /**
+     * 查询用户
+     * @author tyh
+     * @params userInfo
+     * @return List<UserInfo>
+     * @date
+     */
+    List<UserInfo> listUserInfo(UserInfo userInfo);
 }

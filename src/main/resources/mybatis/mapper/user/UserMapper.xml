@@ -66,10 +66,7 @@
     </update>
 
     <!--查询-->
-    <select id="findUserById" resultType="com.example.demo.entity.UserInfo" parameterType="com.example.demo.entity.UserInfo">
-        select * from t_sys_user where id=#{id}
-    </select>
-    <select id="findAll" resultType="com.example.demo.entity.UserInfo">
-        select * from t_sys_user
+    <select id="listUserInfo" resultType="com.example.demo.entity.UserInfo" parameterType="com.example.demo.entity.UserInfo">
+        select if(sex=0,'男','女') as sex,user_name,user_acct from t_sys_user where user_name=#{userName} and is_deleted=0
     </select>
 </mapper>

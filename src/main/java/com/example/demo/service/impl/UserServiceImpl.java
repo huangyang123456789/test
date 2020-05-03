@@ -4,6 +4,7 @@ import com.example.demo.dao.UserDao;
 import com.example.demo.entity.UserInfo;
 import com.example.demo.service.UserService;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    /**
+     * 新增
+     * @author tyh
+     * @params userInfo
+     * @return int
+     * @date
+     */
     @Override
     public int insertUser(UserInfo userInfo) {
         String userName = userInfo.getUserName();
@@ -31,25 +39,42 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int removeUser(String id) {
+    public int deleteUser(String id) {
 
         return userDao.deleteUser(id);
     }
 
     @Override
-    public int reviseUser(UserInfo userInfo) {
+    public int updateUser(UserInfo userInfo) {
+        int userInfos = userDao.updateUser(userInfo);
+        String userName = userInfo.getUserName();
+        if(null != userName && !"".equals(userName)){
 
-        return userDao.updateUser(userInfo);
+        }else{
+            return 0;
+        }
+        return userInfos;
     }
-    @Override
-    public List<UserInfo> findAll() {
 
-        return userDao.findAll();
-    }
-
+    /**
+     * 查询
+     * @author tyh
+     * @params
+     * @return
+     * @date
+     */
     @Override
-    public UserInfo findUserById(String id) {
-        return userDao.findUserById(id);
+    public List<UserInfo> listUserInfo(UserInfo userInfo) {
+        List eptls = null;
+        List<UserInfo> userInfos=userDao.listUserInfo(userInfo);
+        String userName = userInfo.getUserName();
+        if(null != userName && !"".equals(userName)){
+
+        }else{
+            System.out.println("请输入姓名");
+            return eptls;
+        }
+        return userInfos;
     }
 
 }
