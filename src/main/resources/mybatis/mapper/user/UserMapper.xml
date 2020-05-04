@@ -5,22 +5,23 @@
 <mapper namespace="com.example.demo.dao.UserDao">
     <!--新增用户-->
     <insert id="saveUser" parameterType="com.example.demo.entity.UserInfo">
-        insert into user_text
+        insert into t_user
             (   id,
                 name,
-                age,
-                acount,
-                passwd,
+                sex,
                 isDelet,
-
+                passwd,
+                acount,
+                age
             )
         values
            (    #{id},
                 #{name},
-                #{age},
-                #{acount},
+                #{sex},
+                0,
                 #{passwd},
-                #{isDelet}
+                #{acount},
+                #{age}
             )
     </insert>
 </mapper>

@@ -19,8 +19,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public int insertUser(UserInfo userInfo) {
         String userName = userInfo.getName();
-        String userAcount = userInfo.getAcount();
-        if(null != userName && !"".equals(userName) && null != userAcount && !"".equals(userAcount)){
+        if(null != userName && !"".equals(userName)){
             userInfo.setName(userName);
         }
         return userDao.saveUser(userInfo);

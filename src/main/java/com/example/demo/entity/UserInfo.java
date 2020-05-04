@@ -15,6 +15,8 @@ public class UserInfo {
 
     private String passwd;
 
+    private Integer sex;
+
     private Integer isDelet;
 
     public Integer getId() {
@@ -41,11 +43,21 @@ public class UserInfo {
         this.age = age;
     }
 
+    public Integer getSex() {
+        return sex;
+    }
+
+    public void setSex(Integer sex) {
+        this.sex = sex;
+    }
+
     public void setPasswd(String passwd) {this.passwd = passwd; }
 
     public String getPasswd() {return this.passwd;}
 
     public String getAcount() {return this.acount; }
+
+    public void setAcount(String acount) {this.acount = acount; }
 
     public Integer getIsDelet() {return this.isDelet; }
 
@@ -66,7 +78,7 @@ public class UserInfo {
                 "acount='" + acount + '\'' +
                 "passwd='" + passwd + '\'' +
                 "age='" + age + '\'' +
-                "isDelet'" + isDelet + '\'' +
+                "sex='" + sex + '\'' +
                 '}';
     }
 }
