@@ -59,6 +59,8 @@ public class UserInfo {
 
     public void setAcount(String acount) {this.acount = acount; }
 
+    public void setIsDelet(Integer isDelet) {this.isDelet = isDelet; }
+
     public Integer getIsDelet() {return this.isDelet; }
 
     @Override
@@ -77,6 +79,7 @@ public class UserInfo {
                 "name='" + name + '\'' +
                 "acount='" + acount + '\'' +
                 "passwd='" + passwd + '\'' +
+                "isDelet='" + isDelet + '\'' +
                 "age='" + age + '\'' +
                 "sex='" + sex + '\'' +
                 '}';

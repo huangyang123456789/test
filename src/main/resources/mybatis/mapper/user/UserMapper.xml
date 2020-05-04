@@ -24,4 +24,22 @@
                 #{age}
             )
     </insert>
+    <select id="listUserInfo" parameterType="com.example.demo.entity.UserInfo" resultType="com.example.demo.entity.UserInfo">
+        select * from t_user
+    </select>
+    <update id="changeUser" parameterType="com.example.demo.entity.UserInfo">
+        update t_user
+        set
+            name = #{name},
+            sex = #{sex},
+            isdelet = #{isDelet},
+            passwd = #{passwd},
+            acount = #{acount},
+            age = #{age}
+        where id =#{id}
+    </update>
+
+    <delete id="deletUserReal" parameterType="com.example.demo.entity.UserInfo">
+        delete from t_user where id = #{id};
+    </delete>
 </mapper>

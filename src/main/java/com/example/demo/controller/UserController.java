@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author :tisen
  * @date :2020/5/4 12:20 上午
@@ -22,5 +24,20 @@ public class UserController {
     @RequestMapping("/insert")
     public int insertUser(UserInfo userInfo){
         return userService.insertUser(userInfo);
+    }
+
+    @RequestMapping("/select")
+    List<UserInfo> selectUser(UserInfo userInfo){
+        return userService.selectUser(userInfo);
+    }
+
+    @RequestMapping("/update")
+    int updateUser(UserInfo userInfo){
+        return userService.updateUser(userInfo);
+    }
+
+    @RequestMapping("/delete")
+    int deleteUser(UserInfo userInfo){
+        return userService.deleteUser(userInfo);
     }
 }
