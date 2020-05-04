@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.gradletst.dao.UserDao">
+    <!--新增用户-->
+    <insert id="saveUser" parameterType="com.example.gradletst.entity.UserInfo">
+        insert into users
+            (id,
+            user_number,
+            user_name,
+            user_role,
+            user_sex,
+            user_phone,
+            user_email,
+            user_idcard,
+            user_password,
+            is_deleted)
+        values
+           (#{id},
+            #{userNumber},
+            #{userName},
+            #{userRole},
+            #{userSex},
+            #{userPhone},
+            #{userEmail},
+            #{userIdcard},
+            #{userPassword},
+            #{isDeleted});
+
+    </insert>
+    <select id="listUserInfo" parameterType="com.example.gradletst.entity.UserInfo" resultType="com.example.gradletst.entity.UserInfo">
+
+          SELECT * FROM users LEFT JOIN roles on users.user_role = roles.id where (users.user_number = #{userNumber})
+    </select>
+    <update id="setUser" parameterType="com.example.gradletst.entity.UserInfo" >
+        UPDATE users set user_name = #{userName},
+                          user_role = #{userRole},
+                          user_sex = #{userSex},
+                          user_phone = #{userPhone},
+                          user_email = #{userEmail},
+                          user_idcard = #{userIdcard},
+                          user_password = #{userPassword}
+                          WHERE user_number = #{userNumber}
+    </update>
+    <update id="deUser" parameterType="com.example.gradletst.entity.UserInfo" >
+        UPDATE users set is_deleted = "1" WHERE (user_number = #{userNumber})
+    </update>
+    <select id="allUserInfo" parameterType="com.example.gradletst.entity.UserInfo" resultType="com.example.gradletst.entity.UserInfo">
+
+        SELECT * FROM users LEFT JOIN roles on users.user_role = roles.id
+    </select>
+
+</mapper>
