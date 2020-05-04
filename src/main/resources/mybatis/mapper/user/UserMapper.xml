@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.spring.dao.UserDao">
+    <!--新增用户-->
+    <insert id="saveUser" parameterType="com.example.spring.entity.UserInfo">
+    insert into t_sys_user
+            (id,
+            user_acct,
+            user_name,
+            sex,
+            phone,
+            email,
+            id_card,
+            is_deleted,
+            sort_no,
+            gmt_create,
+            create_by,
+            gmt_modified,
+            last_modified_by,
+            version,
+            user_pwd
+            )
+        values
+           (#{id},
+            #{userAcct},
+            #{userName},
+            #{sex},
+            #{phone},
+            #{email},
+            #{idCard},
+            #{isDeleted},
+            0,
+            now(),
+            #{createBy},
+            NOW(),
+            #{createBy},
+            0,
+            #{userPwd})
+    </insert>
+    <select id="listUserInfo" parameterType="com.example.spring.entity.UserInfo" resultType="com.example.spring.entity.UserInfo">
+       Select id,user_acct,user_name,if( sex ='0','女','男')as 'sex',phone,email,is_deleted,sort_no id_card,gmt_create,create_by,gmt_modified,last_modified_by,version,user_pwd from t_sys_user   WHERE id_card=2
+    </select>
+    <update id="updateUser" parameterType="com.example.spring.entity.UserInfo">
+        UPDATE t_sys_user set user_name="szc" WHERE id_card=2
+    </update>
+    <update id="deleteUser" parameterType="com.example.spring.entity.UserInfo">
+        UPDATE t_sys_user set is_deleted=1  WHERE id_card=2
+    </update>
+    <delete id="deleteReUser" parameterType="com.example.spring.entity.UserInfo">
+        DELETE  FROM t_sys_user  WHERE id_card=1
+    </delete>
+</mapper>
