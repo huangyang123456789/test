@@ -22,7 +22,7 @@ public class UserService  {
         //业务逻辑
         String userName=userInfo.getusername();
         if(null != userName && !"".equals(userName)){
-            userName+="aaa";
+            userName+="aaa1";
             userInfo.setusername(userName);
         }
         //学号查重
