@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springtest.springboot_test.dao.UserDao">
+    <!--新增用户-->
+    <insert id="saveUser" parameterType="com.springtest.springboot_test.entity.UserInfo">
+        insert into t_sys_user
+        (
+            id,
+            user_acct,
+            user_name,
+            sex,
+            phone,
+            email,
+            id_card,
+            is_deleted,
+            sort_no,
+            gmt_create,
+            create_by,
+            gmt_modified,
+            last_modified_by,
+            version,
+            user_pwd
+        )
+        values
+        (
+            #{id},
+            #{userAcct},
+            #{userName},
+            #{sex},
+            #{phone},
+            #{email},
+            #{idCard},
+            0,
+            0,
+            now(),
+            "cny",
+            now(),
+            "cny",
+            0,
+            #{userPwd}
+        )
+    </insert>
+
+    <!--查询用户-->
+    <select id="selectUser" parameterType="com.springtest.springboot_test.entity.UserInfo" resultType="com.springtest.springboot_test.entity.UserInfo">
+        select user_acct, user_name, if(sex = 0,'女'，'男') from t_sys_user
+    </select>
+
+    <!--更新用户-->
+    <update id="updateUser" parameterType="com.springtest.springboot_test.entity.UserInfo">
+        update t_sys_user set sex = 0, gmt_modified = now(), last_modified_by = "cny" where user_acct = "20200331"
+    </update>
+
+    <!--删除用户-->
+    <update id="deleteUser" parameterType="com.springtest.springboot_test.entity.UserInfo">
+        update t_sys_user set is_deleted = 1 where user_acct = "20200331"
+    </update>
+</mapper>
