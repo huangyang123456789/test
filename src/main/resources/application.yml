@@ -1,0 +1,29 @@
+#properties写法
+#server.port=9088
+#my.porp=bbb
+#my.exia=exia
+#properties的优先级比yml优先级高
+server:
+  port: 8088
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: "1999kong"
+    druid:
+      initialSize: 1
+      minIdle: 1
+      maxActive: 20
+      maxWait: 60000
+      validationQuery: select 'x' from dual
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      filters: stat,slf4j
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
+  config-location: classpath:mybatis/mybatis-config.xml

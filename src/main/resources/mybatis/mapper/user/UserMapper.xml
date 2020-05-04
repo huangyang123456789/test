@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.UserDao">
+    <!--新增学生-->
+    <insert id="saveUser" parameterType="com.example.demo.entity.User">
+        insert into t_user
+            (user_id,
+            user_name,
+            user_sex,
+            is_deleted,
+            sort_no,
+            gmt_create,
+            create_by,
+            gmt_modified,
+            last_modified_by,
+            version
+            )
+        values
+           (#{userId},
+            #{userName},
+            #{userSex},
+            #{isDeleted},
+            #{sortNo},
+            #{gmtCreate},
+            #{createBy},
+            #{gmtModified},
+            #{lastModifiedBy},
+            #{version}
+            )
+    </insert>
+
+    <insert id="saveRole" parameterType="com.example.demo.entity.Role">
+        insert into t_role
+            (role_id,
+            role_name,
+            is_deleted,
+            sort_no,
+            gmt_create,
+            create_by,
+            gmt_modified,
+            last_modified_by,
+            version
+            )
+        values
+           (#{roleId},
+            #{roleName},
+            #{isDeleted},
+            #{sortNo},
+            #{gmtCreate},
+            #{createBy},
+            #{gmtModified},
+            #{lastModifiedBy},
+            #{version}
+            )
+    </insert>
+
+    <insert id="saveUserRole" parameterType="com.example.demo.entity.UserRole">
+        insert into t_user_role
+            (user_id,
+            role_id,
+            is_deleted,
+            sort_no,
+            gmt_create,
+            create_by,
+            gmt_modified,
+            last_modified_by,
+            version
+            )
+        values
+           (#{userId},
+            #{roleId},
+            #{isDeleted},
+            #{sortNo},
+            #{gmtCreate},
+            #{createBy},
+            #{gmtModified},
+            #{lastModifiedBy},
+            #{version}
+            )
+    </insert>
+
+    <select id="listUser" parameterType="com.example.demo.entity.User" resultType="com.example.demo.entity.User">
+       select * from t_user
+    </select>
+
+    <select id="listRole" parameterType="com.example.demo.entity.Role" resultType="com.example.demo.entity.Role">
+       select * from t_role
+    </select>
+
+    <select id="listUserRole" parameterType="com.example.demo.entity.UserRole" resultType="com.example.demo.entity.UserRole">
+       select * from t_user_role
+    </select>
+
+    <update id="updateUser" parameterType="com.example.demo.entity.User">
+        update t_user set user_name = "kuuga" where user_id = 11
+    </update>
+
+    <update id="updateRole" parameterType="com.example.demo.entity.Role">
+        update t_role set role_name = "rider" where role_id = 1
+    </update>
+
+    <update id="updateUserRole" parameterType="com.example.demo.entity.UserRole">
+        update t_user_role set role_id = 7 where user_id = 1
+    </update>
+
+    <update id="deletedUser" parameterType="com.example.demo.entity.User">
+        update t_user set is_deleted = 1 where user_id = 11
+    </update>
+
+    <update id="deletedRole" parameterType="com.example.demo.entity.Role">
+        update t_role set is_deleted = 1 where role_id = 1
+    </update>
+
+    <update id="deletedUserRole" parameterType="com.example.demo.entity.UserRole">
+        update t_user_role set is_deleted = 1 where user_id = 1
+    </update>
+</mapper>
