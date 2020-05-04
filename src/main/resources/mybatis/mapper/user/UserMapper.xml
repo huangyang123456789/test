@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springboot_mytest.dao.UserDao">
+
+    <!--is_members表添加数据-->
+    <insert id="saveUser" parameterType="com.example.springboot_mytest.entity.UserInfo">
+        insert into t_members
+            (id,name,sex,type,is_deleted)
+        values
+           (#{id},#{name},#{sex},#{type},#{is_deleted})
+    </insert>
+
+    <!--is_members表查找数据-->
+    <select id="listUserInfo" parameterType="com.example.springboot_mytest.entity.UserInfo" resultType="com.example.springboot_mytest.entity.UserInfo">
+        select* from `t_members` where is_deleted = 0
+    </select>
+
+    <!--is_members表修改数据-->
+    <update id="updateUserInfo" parameterType="com.example.springboot_mytest.entity.UserInfo">
+        update t_members set name = "kwq" where id = 4;
+    </update>
+
+    <!--is_members表删除数据-->
+    <update id="deleteUserInfo" parameterType="com.example.springboot_mytest.entity.UserInfo">
+        update t_members set is_deleted = 1 where id = 6;
+    </update>
+
+    <!--s_class表添加数据-->
+    <insert id="saveStudent" parameterType="com.example.springboot_mytest.entity.StudentInfo">
+        insert into s_class
+            (s_id,student_id,s_class,s_deleted)
+        values
+           (#{s_id},#{student_id},#{s_class},#{s_deleted})
+    </insert>
+
+    <!--s_class表查找数据-->
+    <select id="listStudentInfo" parameterType="com.example.springboot_mytest.entity.StudentInfo" resultType="com.example.springboot_mytest.entity.StudentInfo">
+        select* from `s_class` where s_deleted = 0
+    </select>
+
+    <!--s_class表修改数据-->
+    <update id="updateStudentInfo" parameterType="com.example.springboot_mytest.entity.StudentInfo">
+        update s_class set s_class = "体育" where s_id = 5;
+    </update>
+
+    <!--s_student表删除数据-->
+    <update id="deleteStudentInfo" parameterType="com.example.springboot_mytest.entity.StudentInfo">
+        update s_class set s_deleted = 1 where s_id = 5;
+    </update>
+
+    <!--t_class表添加数据-->
+    <insert id="saveTeacher" parameterType="com.example.springboot_mytest.entity.TeacherInfo">
+        insert into t_class
+            (t_id,t_class,teacher_id,t_deleted)
+        values
+           (#{t_id},#{t_class},#{teacher_id},#{t_deleted})
+    </insert>
+
+    <!--t_class表查找数据-->
+    <select id="listTeacherInfo" parameterType="com.example.springboot_mytest.entity.TeacherInfo" resultType="com.example.springboot_mytest.entity.TeacherInfo">
+        select* from `t_class` where t_deleted = 0
+    </select>
+
+    <!--t_class表修改数据-->
+    <update id="updateTeacherInfo" parameterType="com.example.springboot_mytest.entity.TeacherInfo">
+        update t_class set t_class = "体育1" where t_id = 4;
+    </update>
+
+    <!--t_student表删除数据-->
+    <update id="deleteTeacherInfo" parameterType="com.example.springboot_mytest.entity.TeacherInfo">
+        update t_class set t_deleted = 1 where t_id = 4;
+    </update>
+
+</mapper>
